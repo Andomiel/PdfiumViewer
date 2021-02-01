@@ -591,19 +591,19 @@ namespace PdfiumViewer
 
         private static class Imports
         {
-            [DllImport("pdfium.dll")]
+            [DllImport("pdfium.dll", CharSet = CharSet.Unicode)]
             public static extern void FPDF_AddRef();
 
-            [DllImport("pdfium.dll")]
+            [DllImport("pdfium.dll", CharSet = CharSet.Unicode)]
             public static extern void FPDF_Release();
 
-            [DllImport("pdfium.dll", CharSet = CharSet.Ansi)]            
+            [DllImport("pdfium.dll", CharSet = CharSet.Unicode)]
             public static extern IntPtr FPDF_LoadCustomDocument([MarshalAs(UnmanagedType.LPStruct)]FPDF_FILEACCESS access, string password);
 
-            [DllImport("pdfium.dll", CharSet = CharSet.Ansi)]
+            [DllImport("pdfium.dll", CharSet = CharSet.Unicode)]
             public static extern IntPtr FPDF_LoadMemDocument(SafeHandle data_buf, int size, string password);
 
-            [DllImport("pdfium.dll", CharSet = CharSet.Ansi)]
+            [DllImport("pdfium.dll", CharSet = CharSet.Unicode)]
             public static extern IntPtr FPDF_LoadMemDocument(byte[] data_buf, int size, string password);
 
             [DllImport("pdfium.dll")]
@@ -726,7 +726,7 @@ namespace PdfiumViewer
             [DllImport("pdfium.dll")]
             public static extern IntPtr FPDFLink_GetAction(IntPtr link);
 
-            [DllImport("pdfium.dll")]
+            [DllImport("pdfium.dll", CharSet = CharSet.Unicode)]
             public static extern uint FPDFAction_GetURIPath(IntPtr document, IntPtr action, StringBuilder buffer, uint buflen);
 
             [DllImport("pdfium.dll")]
@@ -750,7 +750,7 @@ namespace PdfiumViewer
             [DllImport("pdfium.dll")]
             public static extern uint FPDF_GetLastError();
 
-            [DllImport("pdfium.dll")]
+            [DllImport("pdfium.dll", CharSet = CharSet.Unicode)]
             public static extern uint FPDF_GetMetaText(IntPtr document, string tag, byte[] buffer, uint buflen);
 
             #region Save/Edit APIs

@@ -42,12 +42,23 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CloseableTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlCommon.cs" />
     <Compile Include="CustomScrollControl.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FileTreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileTreeView.Designer.cs">
+      <DependentUpon>FileTreeView.cs</DependentUpon>
     </Compile>
     <Compile Include="HitTest.cs" />
     <Compile Include="IPdfDocument.cs" />
@@ -133,6 +144,9 @@
     <None Include="Resources\ShadeBorder-NW.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FileTreeView.resx">
+      <DependentUpon>FileTreeView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PasswordForm.resx">
       <DependentUpon>PasswordForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +165,15 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="pan.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification-close-active.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
