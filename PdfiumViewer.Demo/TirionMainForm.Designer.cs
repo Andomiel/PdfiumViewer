@@ -36,6 +36,7 @@ namespace PdfiumViewer.Demo
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printMultiplePagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,43 +64,44 @@ namespace PdfiumViewer.Demo
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this._page = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this._zoom = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this._fitWidth = new System.Windows.Forms.ToolStripButton();
+            this._fitHeight = new System.Windows.Forms.ToolStripButton();
+            this._fitBest = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this._rotateLeft = new System.Windows.Forms.ToolStripButton();
+            this._rotateRight = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this._showToolbar = new System.Windows.Forms.ToolStripButton();
+            this._showBookmarks = new System.Windows.Forms.ToolStripButton();
+            this._getTextFromPage = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this._pageToolStripLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this._coordinatesToolStripLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this._fitWidth = new System.Windows.Forms.ToolStripButton();
-            this._fitHeight = new System.Windows.Forms.ToolStripButton();
-            this._fitBest = new System.Windows.Forms.ToolStripButton();
-            this._rotateLeft = new System.Windows.Forms.ToolStripButton();
-            this._rotateRight = new System.Windows.Forms.ToolStripButton();
-            this._showToolbar = new System.Windows.Forms.ToolStripButton();
-            this._showBookmarks = new System.Windows.Forms.ToolStripButton();
-            this._getTextFromPage = new System.Windows.Forms.ToolStripButton();
-            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.pdfViewer1 = new PdfiumViewer.PdfViewer();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -124,47 +126,54 @@ namespace PdfiumViewer.Demo
             this.toolStripMenuItem3,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 21);
-            this.fileToolStripMenuItem.Text = "&File";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.fileToolStripMenuItem.Text = "&文件";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.openToolStripMenuItem.Text = "&打开文件";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(171, 22);
+            this.toolStripMenuItem8.Text = "&打开文件夹";
+            this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(189, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(168, 6);
             // 
             // printPreviewToolStripMenuItem
             // 
             this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.printPreviewToolStripMenuItem.Text = "Print Preview";
+            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.printPreviewToolStripMenuItem.Text = "打印预览";
             this.printPreviewToolStripMenuItem.Click += new System.EventHandler(this.printPreviewToolStripMenuItem_Click);
             // 
             // printMultiplePagesToolStripMenuItem
             // 
             this.printMultiplePagesToolStripMenuItem.Name = "printMultiplePagesToolStripMenuItem";
-            this.printMultiplePagesToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.printMultiplePagesToolStripMenuItem.Text = "Print Multiple Pages";
+            this.printMultiplePagesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.printMultiplePagesToolStripMenuItem.Text = "打印多页";
             this.printMultiplePagesToolStripMenuItem.Click += new System.EventHandler(this.printMultiplePagesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(189, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(168, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.exitToolStripMenuItem.Text = "退出";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // toolsToolStripMenuItem
@@ -184,58 +193,58 @@ namespace PdfiumViewer.Demo
             this.toolStripMenuItem6,
             this.informationToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(52, 21);
-            this.toolsToolStripMenuItem.Text = "&Tools";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.toolsToolStripMenuItem.Text = "&工具";
             // 
             // findToolStripMenuItem
             // 
             this.findToolStripMenuItem.Name = "findToolStripMenuItem";
             this.findToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.findToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.findToolStripMenuItem.Text = "&Find";
+            this.findToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.findToolStripMenuItem.Text = "&查找";
             this.findToolStripMenuItem.Click += new System.EventHandler(this.findToolStripMenuItem_Click);
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(259, 6);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(157, 6);
             // 
             // renderToBitmapsToolStripMenuItem
             // 
             this.renderToBitmapsToolStripMenuItem.Name = "renderToBitmapsToolStripMenuItem";
-            this.renderToBitmapsToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.renderToBitmapsToolStripMenuItem.Text = "&Render to Bitmaps";
+            this.renderToBitmapsToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.renderToBitmapsToolStripMenuItem.Text = "显示为图片";
             this.renderToBitmapsToolStripMenuItem.Click += new System.EventHandler(this.renderToBitmapsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(259, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(157, 6);
             // 
             // cutMarginsWhenPrintingToolStripMenuItem
             // 
             this.cutMarginsWhenPrintingToolStripMenuItem.Name = "cutMarginsWhenPrintingToolStripMenuItem";
-            this.cutMarginsWhenPrintingToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.cutMarginsWhenPrintingToolStripMenuItem.Text = "Cut margins when printing";
+            this.cutMarginsWhenPrintingToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.cutMarginsWhenPrintingToolStripMenuItem.Text = "打印时去除边框";
             this.cutMarginsWhenPrintingToolStripMenuItem.Click += new System.EventHandler(this.cutMarginsWhenPrintingToolStripMenuItem_Click);
             // 
             // shrinkToMarginsWhenPrintingToolStripMenuItem
             // 
             this.shrinkToMarginsWhenPrintingToolStripMenuItem.Name = "shrinkToMarginsWhenPrintingToolStripMenuItem";
-            this.shrinkToMarginsWhenPrintingToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.shrinkToMarginsWhenPrintingToolStripMenuItem.Text = "Shrink to margins when printing";
+            this.shrinkToMarginsWhenPrintingToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.shrinkToMarginsWhenPrintingToolStripMenuItem.Text = "打印时缩小边距";
             this.shrinkToMarginsWhenPrintingToolStripMenuItem.Click += new System.EventHandler(this.shrinkToMarginsWhenPrintingToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(259, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(157, 6);
             // 
             // deleteCurrentPageToolStripMenuItem
             // 
             this.deleteCurrentPageToolStripMenuItem.Name = "deleteCurrentPageToolStripMenuItem";
-            this.deleteCurrentPageToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.deleteCurrentPageToolStripMenuItem.Text = "Delete Current Page";
+            this.deleteCurrentPageToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.deleteCurrentPageToolStripMenuItem.Text = "删除当前页";
             this.deleteCurrentPageToolStripMenuItem.Click += new System.EventHandler(this.deleteCurrentPageToolStripMenuItem_Click);
             // 
             // rotateCurrentPageToolStripMenuItem
@@ -246,8 +255,8 @@ namespace PdfiumViewer.Demo
             this.rotate180ToolStripMenuItem,
             this.rotate270ToolStripMenuItem});
             this.rotateCurrentPageToolStripMenuItem.Name = "rotateCurrentPageToolStripMenuItem";
-            this.rotateCurrentPageToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.rotateCurrentPageToolStripMenuItem.Text = "Rotate Current Page";
+            this.rotateCurrentPageToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.rotateCurrentPageToolStripMenuItem.Text = "旋转当前页";
             // 
             // rotate0ToolStripMenuItem
             // 
@@ -280,25 +289,25 @@ namespace PdfiumViewer.Demo
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(259, 6);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(157, 6);
             // 
             // showRangeOfPagesToolStripMenuItem
             // 
             this.showRangeOfPagesToolStripMenuItem.Name = "showRangeOfPagesToolStripMenuItem";
-            this.showRangeOfPagesToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.showRangeOfPagesToolStripMenuItem.Text = "Show range of pages";
+            this.showRangeOfPagesToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.showRangeOfPagesToolStripMenuItem.Text = "显示页码";
             this.showRangeOfPagesToolStripMenuItem.Click += new System.EventHandler(this.showRangeOfPagesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(259, 6);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(157, 6);
             // 
             // informationToolStripMenuItem
             // 
             this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
-            this.informationToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.informationToolStripMenuItem.Text = "Information";
+            this.informationToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.informationToolStripMenuItem.Text = "关于";
             this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
             // 
             // toolStrip1
@@ -335,8 +344,8 @@ namespace PdfiumViewer.Demo
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(40, 22);
-            this.toolStripLabel1.Text = "Page:";
+            this.toolStripLabel1.Size = new System.Drawing.Size(35, 22);
+            this.toolStripLabel1.Text = "页码:";
             // 
             // _page
             // 
@@ -349,148 +358,6 @@ namespace PdfiumViewer.Demo
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(45, 22);
-            this.toolStripLabel2.Text = "Zoom:";
-            // 
-            // _zoom
-            // 
-            this._zoom.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this._zoom.Name = "_zoom";
-            this._zoom.Size = new System.Drawing.Size(100, 25);
-            this._zoom.KeyDown += new System.Windows.Forms.KeyEventHandler(this._zoom_KeyDown);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this._pageToolStripLabel,
-            this.toolStripStatusLabel2,
-            this._coordinatesToolStripLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 527);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1128, 22);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(40, 17);
-            this.toolStripStatusLabel1.Text = "Page:";
-            // 
-            // _pageToolStripLabel
-            // 
-            this._pageToolStripLabel.Name = "_pageToolStripLabel";
-            this._pageToolStripLabel.Size = new System.Drawing.Size(46, 17);
-            this._pageToolStripLabel.Text = "(page)";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(82, 17);
-            this.toolStripStatusLabel2.Text = "Coordinates:";
-            // 
-            // _coordinatesToolStripLabel
-            // 
-            this._coordinatesToolStripLabel.Name = "_coordinatesToolStripLabel";
-            this._coordinatesToolStripLabel.Size = new System.Drawing.Size(85, 17);
-            this._coordinatesToolStripLabel.Text = "(coordinates)";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.Controls.Add(this.pdfViewer1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.toolStrip2, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 50);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1128, 477);
-            this.tableLayoutPanel1.TabIndex = 4;
-            // 
-            // toolStrip2
-            // 
-            this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel3,
-            this.toolStripButton5,
-            this.toolStripButton6,
-            this.toolStripButton7});
-            this.toolStrip2.Location = new System.Drawing.Point(1, 1);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(337, 25);
-            this.toolStrip2.TabIndex = 2;
-            this.toolStrip2.Text = "toolStrip2";
-            // 
-            // toolStripLabel3
-            // 
-            this.toolStripLabel3.AutoSize = false;
-            this.toolStripLabel3.Enabled = false;
-            this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(180, 22);
-            this.toolStripLabel3.Text = "文件清单";
-            this.toolStripLabel3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = global::PdfiumViewer.Demo.Properties.Resources.import;
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton5.Text = "toolStripButton5";
-            // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = global::PdfiumViewer.Demo.Properties.Resources.export;
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton6.Text = "toolStripButton6";
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = global::PdfiumViewer.Demo.Properties.Resources.Remove_16x;
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton7.Text = "toolStripButton7";
             // 
             // toolStripButton1
             // 
@@ -512,6 +379,29 @@ namespace PdfiumViewer.Demo
             this.toolStripButton2.Text = ">";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(35, 22);
+            this.toolStripLabel2.Text = "缩放:";
+            // 
+            // _zoom
+            // 
+            this._zoom.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this._zoom.Name = "_zoom";
+            this._zoom.Size = new System.Drawing.Size(100, 25);
+            this._zoom.KeyDown += new System.Windows.Forms.KeyEventHandler(this._zoom_KeyDown);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
+            // 
             // toolStripButton4
             // 
             this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -532,14 +422,19 @@ namespace PdfiumViewer.Demo
             this.toolStripButton3.Text = "-";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
             // _fitWidth
             // 
             this._fitWidth.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this._fitWidth.Image = ((System.Drawing.Image)(resources.GetObject("_fitWidth.Image")));
             this._fitWidth.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._fitWidth.Name = "_fitWidth";
-            this._fitWidth.Size = new System.Drawing.Size(63, 22);
-            this._fitWidth.Text = "Fit Width";
+            this._fitWidth.Size = new System.Drawing.Size(72, 22);
+            this._fitWidth.Text = "自适应宽度";
             this._fitWidth.Click += new System.EventHandler(this._fitWidth_Click);
             // 
             // _fitHeight
@@ -548,8 +443,8 @@ namespace PdfiumViewer.Demo
             this._fitHeight.Image = ((System.Drawing.Image)(resources.GetObject("_fitHeight.Image")));
             this._fitHeight.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._fitHeight.Name = "_fitHeight";
-            this._fitHeight.Size = new System.Drawing.Size(67, 22);
-            this._fitHeight.Text = "Fit Height";
+            this._fitHeight.Size = new System.Drawing.Size(72, 22);
+            this._fitHeight.Text = "自适应高度";
             this._fitHeight.Click += new System.EventHandler(this._fitHeight_Click);
             // 
             // _fitBest
@@ -558,9 +453,14 @@ namespace PdfiumViewer.Demo
             this._fitBest.Image = ((System.Drawing.Image)(resources.GetObject("_fitBest.Image")));
             this._fitBest.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._fitBest.Name = "_fitBest";
-            this._fitBest.Size = new System.Drawing.Size(54, 22);
-            this._fitBest.Text = "Fit Best";
+            this._fitBest.Size = new System.Drawing.Size(48, 22);
+            this._fitBest.Text = "自适应";
             this._fitBest.Click += new System.EventHandler(this._fitBest_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
             // _rotateLeft
             // 
@@ -568,8 +468,8 @@ namespace PdfiumViewer.Demo
             this._rotateLeft.Image = ((System.Drawing.Image)(resources.GetObject("_rotateLeft.Image")));
             this._rotateLeft.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._rotateLeft.Name = "_rotateLeft";
-            this._rotateLeft.Size = new System.Drawing.Size(75, 22);
-            this._rotateLeft.Text = "Rotate Left";
+            this._rotateLeft.Size = new System.Drawing.Size(36, 22);
+            this._rotateLeft.Text = "左转";
             this._rotateLeft.Click += new System.EventHandler(this._rotateLeft_Click);
             // 
             // _rotateRight
@@ -578,9 +478,14 @@ namespace PdfiumViewer.Demo
             this._rotateRight.Image = ((System.Drawing.Image)(resources.GetObject("_rotateRight.Image")));
             this._rotateRight.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._rotateRight.Name = "_rotateRight";
-            this._rotateRight.Size = new System.Drawing.Size(84, 22);
-            this._rotateRight.Text = "Rotate Right";
+            this._rotateRight.Size = new System.Drawing.Size(36, 22);
+            this._rotateRight.Text = "右转";
             this._rotateRight.Click += new System.EventHandler(this._rotateRight_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
             // _showToolbar
             // 
@@ -589,8 +494,8 @@ namespace PdfiumViewer.Demo
             this._showToolbar.Image = ((System.Drawing.Image)(resources.GetObject("_showToolbar.Image")));
             this._showToolbar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._showToolbar.Name = "_showToolbar";
-            this._showToolbar.Size = new System.Drawing.Size(93, 22);
-            this._showToolbar.Text = "Show Toolbar";
+            this._showToolbar.Size = new System.Drawing.Size(72, 22);
+            this._showToolbar.Text = "显示工具栏";
             this._showToolbar.Click += new System.EventHandler(this._hideToolbar_Click);
             // 
             // _showBookmarks
@@ -600,8 +505,8 @@ namespace PdfiumViewer.Demo
             this._showBookmarks.Image = ((System.Drawing.Image)(resources.GetObject("_showBookmarks.Image")));
             this._showBookmarks.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._showBookmarks.Name = "_showBookmarks";
-            this._showBookmarks.Size = new System.Drawing.Size(114, 22);
-            this._showBookmarks.Text = "Show Bookmarks";
+            this._showBookmarks.Size = new System.Drawing.Size(60, 22);
+            this._showBookmarks.Text = "显示书签";
             this._showBookmarks.Click += new System.EventHandler(this._hideBookmarks_Click);
             // 
             // _getTextFromPage
@@ -611,38 +516,146 @@ namespace PdfiumViewer.Demo
             this._getTextFromPage.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._getTextFromPage.Name = "_getTextFromPage";
             this._getTextFromPage.Size = new System.Drawing.Size(60, 22);
-            this._getTextFromPage.Text = "Get Text";
+            this._getTextFromPage.Text = "获取文本";
             this._getTextFromPage.ToolTipText = "Get Text From Current Page";
             this._getTextFromPage.Click += new System.EventHandler(this._getTextFromPage_Click);
             // 
-            // toolStripMenuItem8
+            // statusStrip1
             // 
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(192, 22);
-            this.toolStripMenuItem8.Text = "&Open &Folder";
-            this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this._pageToolStripLabel,
+            this.toolStripStatusLabel2,
+            this._coordinatesToolStripLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 527);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1128, 22);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(47, 17);
+            this.toolStripStatusLabel1.Text = "当前页:";
+            // 
+            // _pageToolStripLabel
+            // 
+            this._pageToolStripLabel.Name = "_pageToolStripLabel";
+            this._pageToolStripLabel.Size = new System.Drawing.Size(46, 17);
+            this._pageToolStripLabel.Text = "(page)";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(35, 17);
+            this.toolStripStatusLabel2.Text = "光标:";
+            // 
+            // _coordinatesToolStripLabel
+            // 
+            this._coordinatesToolStripLabel.Name = "_coordinatesToolStripLabel";
+            this._coordinatesToolStripLabel.Size = new System.Drawing.Size(85, 17);
+            this._coordinatesToolStripLabel.Text = "(coordinates)";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 50);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel1);
+            this.splitContainer1.Panel1MinSize = 300;
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.pdfViewer1);
+            this.splitContainer1.Size = new System.Drawing.Size(1128, 477);
+            this.splitContainer1.SplitterDistance = 300;
+            this.splitContainer1.TabIndex = 4;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(300, 477);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 5;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1, 1);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(298, 24);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(212, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "文件清单";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::PdfiumViewer.Demo.Properties.Resources.export;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Location = new System.Drawing.Point(218, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(20, 24);
+            this.button1.TabIndex = 99;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // pdfViewer1
             // 
             this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pdfViewer1.Location = new System.Drawing.Point(342, 4);
+            this.pdfViewer1.Location = new System.Drawing.Point(0, 0);
             this.pdfViewer1.Name = "pdfViewer1";
-            this.tableLayoutPanel1.SetRowSpan(this.pdfViewer1, 2);
-            this.pdfViewer1.Size = new System.Drawing.Size(782, 471);
-            this.pdfViewer1.TabIndex = 1;
+            this.pdfViewer1.Size = new System.Drawing.Size(824, 477);
+            this.pdfViewer1.TabIndex = 2;
             // 
             // TirionMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1128, 549);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "TirionMainForm";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -650,10 +663,12 @@ namespace PdfiumViewer.Demo
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -714,14 +729,13 @@ namespace PdfiumViewer.Demo
         private System.Windows.Forms.ToolStripMenuItem findToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem printMultiplePagesToolStripMenuItem;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private PdfViewer pdfViewer1;
-        private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private PdfViewer pdfViewer1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

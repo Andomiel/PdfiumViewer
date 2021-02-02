@@ -109,7 +109,7 @@ namespace PdfiumViewer.Demo
 
                 if (form.ShowDialog(this) != DialogResult.OK)
                 {
-                    Dispose();
+                    //Dispose();
                     return;
                 }
 
@@ -379,21 +379,32 @@ namespace PdfiumViewer.Demo
             }
         }
 
+        private string lastDirectoryPath = string.Empty;
+
         private void toolStripMenuItem8_Click(object sender, EventArgs e)
         {
             using (var form = new FolderBrowserDialog())
             {
                 form.Description = "Open Project File Directory";
+                if (!string.IsNullOrEmpty(this.lastDirectoryPath))
+                {
+                    form.SelectedPath = lastDirectoryPath;
+                }
 
                 if (form.ShowDialog(this) != DialogResult.OK)
                 {
-                    Dispose();
+                    //Dispose();
                     return;
+                }
+                if (this.tableLayoutPanel1.Controls.Count > 1)
+                {
+                    this.tableLayoutPanel1.Controls.RemoveAt(1);
                 }
 
                 string targetPath = form.SelectedPath;
+                this.lastDirectoryPath = targetPath;
                 //设置上层label文本
-                toolStripLabel3.Text = new DirectoryInfo(targetPath).Name;
+                label1.Text = new DirectoryInfo(targetPath).Name;
                 // 
                 // 添加tab控件
                 // 
@@ -403,13 +414,11 @@ namespace PdfiumViewer.Demo
                 closeableTabControl1.Name = "closeableTabControl1";
                 closeableTabControl1.SelectedIndex = 0;
                 closeableTabControl1.Size = new System.Drawing.Size(332, 233);
-                closeableTabControl1.TabBackSelectedColor = System.Drawing.Color.Green;
-                closeableTabControl1.TabCloseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
                 closeableTabControl1.TabCloseShow = true;
                 closeableTabControl1.TabIndex = 3;
                 closeableTabControl1.TabRadiusLeftTop = 0;
-                closeableTabControl1.TabTextNormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-                closeableTabControl1.TabTextSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+                closeableTabControl1.TabBackNormalColor = Color.LightGreen;
+                closeableTabControl1.TabBackSelectedColor = Color.ForestGreen;
 
                 var directories = Directory.GetDirectories(targetPath);
                 foreach (var item in directories)
@@ -461,6 +470,7 @@ namespace PdfiumViewer.Demo
             listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             listView1.HideSelection = false;
             listView1.Location = new System.Drawing.Point(3, 3);
+            listView1.Margin = new System.Windows.Forms.Padding(0);
             listView1.Name = "listView1";
             listView1.Size = new System.Drawing.Size(318, 410);
             listView1.TabIndex = 0;
@@ -468,10 +478,13 @@ namespace PdfiumViewer.Demo
             listView1.View = System.Windows.Forms.View.Details;
             listView1.MultiSelect = false;
             listView1.FullRowSelect = true;
+            listView1.BorderStyle = BorderStyle.None;
+            listView1.Scrollable = false;
 
             for (int i = 0; i < files.Length; i++)
             {
-                listView1.Items.Add(new ListViewItem(new string[] { (i + 1).ToString(), files[i].Name, files[i].FullName }));
+                var file = files[i];
+                listView1.Items.Add(new ListViewItem(new string[] { (i + 1).ToString(), file.Name.Replace(file.Extension, string.Empty), file.FullName }));
             }
 
             listView1.ItemSelectionChanged += listView1_ItemSelectionChanged;
