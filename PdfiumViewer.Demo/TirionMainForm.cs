@@ -519,5 +519,12 @@ namespace PdfiumViewer.Demo
             pdfViewer1.Document = OpenDocument(fileName);
             renderToBitmapsToolStripMenuItem.Enabled = true;
         }
+
+        private string[] lastFolders;
+
+        private void openProfessionFolder_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
