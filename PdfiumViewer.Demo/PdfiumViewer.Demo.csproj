@@ -97,17 +97,44 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckboxFolderBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckboxFolderBrowser.Designer.cs">
+      <DependentUpon>CheckboxFolderBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckboxFolderBrowser\DriveTypes.cs" />
+    <Compile Include="CheckboxFolderBrowser\EnumEditor.cs" />
     <Compile Include="ExportBitmapsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExportBitmapsForm.Designer.cs">
       <DependentUpon>ExportBitmapsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckboxFolderBrowser\BrowserProvider\FolderBrowserBaseDataProvider.cs" />
+    <Compile Include="CheckboxFolderBrowser\BrowserProvider\ITreeStrategyDataProvider.cs" />
+    <Compile Include="CheckboxFolderBrowser\Logicaldisk.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckboxFolderBrowser\SystemImageList.cs" />
+    <Compile Include="CheckboxFolderBrowser\Shell\Interface\IDropSource.cs" />
+    <Compile Include="CheckboxFolderBrowser\Shell\Interface\IDropTarget.cs" />
+    <Compile Include="CheckboxFolderBrowser\Shell\Interface\IEnumIDList.cs" />
+    <Compile Include="CheckboxFolderBrowser\Shell\Interface\IShellFolder.cs" />
+    <Compile Include="CheckboxFolderBrowser\Shell\PIDL.cs" />
+    <Compile Include="CheckboxFolderBrowser\Shell\ShellAPI.cs" />
+    <Compile Include="CheckboxFolderBrowser\Shell\ShellBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckboxFolderBrowser\Shell\ShellImageList.cs" />
+    <Compile Include="CheckboxFolderBrowser\Shell\ShellItem.cs" />
     <Compile Include="TirionMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +168,16 @@
     <Compile Include="SearchForm.Designer.cs">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckboxFolderBrowser\TreeNodeBase.cs" />
+    <Compile Include="CheckboxFolderBrowser\TreeViewFolderBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckboxFolderBrowser\TreeViewFolderBrowserNodeFactory.cs" />
+    <Compile Include="CheckboxFolderBrowser\BrowserProvider\TreeStrategyFolderBrowserProvider.cs" />
+    <Compile Include="CheckboxFolderBrowser\BrowserProvider\TreeStrategyShell32Provider.cs" />
+    <EmbeddedResource Include="CheckboxFolderBrowser.resx">
+      <DependentUpon>CheckboxFolderBrowser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExportBitmapsForm.resx">
       <DependentUpon>ExportBitmapsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +239,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Remove_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\touchpad_button_left_click.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

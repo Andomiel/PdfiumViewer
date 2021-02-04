@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -16,6 +17,8 @@ namespace PdfiumViewer.Demo
         public TirionMainForm()
         {
             InitializeComponent();
+
+            this.Text = string.Format("{0} - {1} {2}", System.Windows.Forms.Application.CompanyName, System.Windows.Forms.Application.ProductName, System.Windows.Forms.Application.ProductVersion);
 
             renderToBitmapsToolStripMenuItem.Enabled = false;
 
@@ -31,6 +34,8 @@ namespace PdfiumViewer.Demo
             _zoom.Text = pdfViewer1.Renderer.Zoom.ToString();
 
             Disposed += (s, e) => pdfViewer1.Document?.Dispose();
+
+            checkboxBrowser.VisibleChanged += CheckboxBrowser_VisibleChanged;
         }
 
         private void Renderer_MouseLeave(object sender, EventArgs e)
@@ -383,7 +388,7 @@ namespace PdfiumViewer.Demo
 
         private void toolStripMenuItem8_Click(object sender, EventArgs e)
         {
-            using (var form = new MultiFolderBrowerDialog())
+            using (var form = new MultiFolderBrowserDialog())
             {
                 form.Title = "Open Project File Directory...";
 
@@ -525,11 +530,63 @@ namespace PdfiumViewer.Demo
             renderToBitmapsToolStripMenuItem.Enabled = true;
         }
 
-        private string[] lastFolders;
+        private List<string> lastFolders;
+
+        private CheckboxFolderBrowser checkboxBrowser = new CheckboxFolderBrowser();
 
         private void openProfessionFolder_Click(object sender, EventArgs e)
         {
+            if (checkboxBrowser == null)
+            {
+                checkboxBrowser = new CheckboxFolderBrowser();
+            }
+            checkboxBrowser.StartPosition = FormStartPosition.CenterParent;
+            checkboxBrowser.Show(this);
+        }
 
+
+        private void CheckboxBrowser_VisibleChanged(object sender, EventArgs e)
+        {
+            if (checkboxBrowser.Visible)
+            {
+                return;
+            }
+            if (checkboxBrowser.DialogResult != DialogResult.OK)
+            {
+                return;
+            }
+            if (this.tableLayoutPanel1.Controls.Count > 1)
+            {
+                this.tableLayoutPanel1.Controls.RemoveAt(1);
+            }
+            if (checkboxBrowser.SelectedDirectories.Count == 0)
+            {
+                return;
+            }
+
+            this.lastFolders = checkboxBrowser.SelectedDirectories.OrderBy(p => p.Length).ToList();
+            //设置上层label文本
+            label1.Text = new DirectoryInfo(this.lastFolders.First()).Name;
+            // 
+            // 添加tab控件
+            // 
+            var closeableTabControl1 = new CloseableTabControl();
+            closeableTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            closeableTabControl1.Location = new System.Drawing.Point(3, 241);
+            closeableTabControl1.Name = "closeableTabControl1";
+            closeableTabControl1.SelectedIndex = 0;
+            closeableTabControl1.Size = new System.Drawing.Size(332, 233);
+            closeableTabControl1.TabCloseShow = true;
+            closeableTabControl1.TabIndex = 3;
+            closeableTabControl1.TabRadiusLeftTop = 0;
+            closeableTabControl1.TabBackNormalColor = Color.LightGreen;
+            closeableTabControl1.TabBackSelectedColor = Color.ForestGreen;
+
+            foreach (var item in this.lastFolders)
+            {
+                AddTabPagesByDirectory(item, closeableTabControl1);
+            }
+            this.tableLayoutPanel1.Controls.Add(closeableTabControl1, 0, 1);
         }
     }
 }

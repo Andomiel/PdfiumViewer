@@ -1,6 +1,6 @@
 ﻿namespace PdfiumViewer
 {
-    partial class MultiFolderBrowerDialog
+    partial class MultiFolderBrowserDialog
     {
         /// <summary>
         /// 必需的设计器变量。

@@ -47,13 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FolderBrower\FolderSelectionReflector.cs" />
-    <Compile Include="FolderBrower\FolderSelectionWrapper.cs" />
-    <Compile Include="FolderBrower\MultiFolderBrowerDialog.cs">
+    <Compile Include="FolderBrowser\FolderSelectionReflector.cs" />
+    <Compile Include="FolderBrowser\FolderSelectionWrapper.cs" />
+    <Compile Include="FolderBrowser\MultiFolderBrowserDialog.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FolderBrower\MultiFolderBrowerDialog.Designer.cs">
-      <DependentUpon>MultiFolderBrowerDialog.cs</DependentUpon>
+    <Compile Include="FolderBrowser\MultiFolderBrowserDialog.Designer.cs">
+      <DependentUpon>MultiFolderBrowserDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="TabControl\CloseableTabControl.cs">
       <SubType>Component</SubType>
@@ -68,7 +68,7 @@
     <Compile Include="FileTreeView.Designer.cs">
       <DependentUpon>FileTreeView.cs</DependentUpon>
     </Compile>
-    <Compile Include="FolderBrower\FolderSelectDialog.cs" />
+    <Compile Include="FolderBrowser\FolderSelectDialog.cs" />
     <Compile Include="HitTest.cs" />
     <Compile Include="IPdfDocument.cs" />
     <Compile Include="IPdfMarker.cs" />
@@ -184,6 +184,7 @@
   <ItemGroup>
     <None Include="Resources\import.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

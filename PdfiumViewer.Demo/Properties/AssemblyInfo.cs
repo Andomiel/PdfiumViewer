@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("PdfViewer.Demo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Pieter van Ginkel")]
+[assembly: AssemblyCompany("Tirion")]
 [assembly: AssemblyProduct("PdfViewer.Demo")]
-[assembly: AssemblyCopyright("Pieter van Ginkel © 2012-2015")]
+[assembly: AssemblyCopyright("Andomiel © 2012-2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

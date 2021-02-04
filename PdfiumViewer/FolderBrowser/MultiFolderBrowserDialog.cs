@@ -17,18 +17,18 @@ namespace PdfiumViewer
     [DefaultProperty("RootFolder")]
     [ToolboxBitmap(typeof(FolderBrowserDialog))]
     [Description("A .NET component library that delivers a better folder-browsing and selection experience.")]
-    public partial class MultiFolderBrowerDialog : CommonDialog
+    public partial class MultiFolderBrowserDialog : CommonDialog
     {
         #region Constructors
 
-        public MultiFolderBrowerDialog()
+        public MultiFolderBrowserDialog()
         {
             InitializeComponent();
 
             SetDefaults();
         }
 
-        public MultiFolderBrowerDialog(IContainer container)
+        public MultiFolderBrowserDialog(IContainer container)
         {
             container.Add(this);
 
@@ -222,7 +222,7 @@ namespace PdfiumViewer
 namespace PdfiumViewer.Editors
 {
     /// <summary>
-    /// Provides a custom <see cref="MultiFolderBrowerDialog"/> UI Editor
+    /// Provides a custom <see cref="MultiFolderBrowserDialog"/> UI Editor
     /// for browsing through folders via the Properties window. 
     /// This allows for the selection of a single folder.
     /// It's designed as a replacement for <see cref="FolderBrowserDialog"/>'s
@@ -251,7 +251,7 @@ namespace PdfiumViewer.Editors
 
             if (editorService != null)
             {
-                MultiFolderBrowerDialog editor = new MultiFolderBrowerDialog();
+                MultiFolderBrowserDialog editor = new MultiFolderBrowserDialog();
 
                 editor.editorService = editorService;
                 editor.Multiselect = false;
@@ -294,7 +294,7 @@ namespace PdfiumViewer.Editors
 
             if (editorService != null)
             {
-                MultiFolderBrowerDialog editor = new MultiFolderBrowerDialog();
+                MultiFolderBrowserDialog editor = new MultiFolderBrowserDialog();
 
                 editor.editorService = editorService;
                 editor.Multiselect = true;
