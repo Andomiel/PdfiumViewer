@@ -47,6 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FolderBrower\FolderSelectionReflector.cs" />
+    <Compile Include="FolderBrower\FolderSelectionWrapper.cs" />
+    <Compile Include="FolderBrower\MultiFolderBrowerDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FolderBrower\MultiFolderBrowerDialog.Designer.cs">
+      <DependentUpon>MultiFolderBrowerDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="TabControl\CloseableTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -60,7 +68,7 @@
     <Compile Include="FileTreeView.Designer.cs">
       <DependentUpon>FileTreeView.cs</DependentUpon>
     </Compile>
-    <Compile Include="FolderSelectDialog.cs" />
+    <Compile Include="FolderBrower\FolderSelectDialog.cs" />
     <Compile Include="HitTest.cs" />
     <Compile Include="IPdfDocument.cs" />
     <Compile Include="IPdfMarker.cs" />

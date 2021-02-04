@@ -383,12 +383,17 @@ namespace PdfiumViewer.Demo
 
         private void toolStripMenuItem8_Click(object sender, EventArgs e)
         {
-            using (var form = new FolderBrowserDialog())
+            using (var form = new MultiFolderBrowerDialog())
             {
-                form.Description = "Open Project File Directory";
-                if (!string.IsNullOrEmpty(this.lastDirectoryPath))
+                form.Title = "Open Project File Directory...";
+
+                if (string.IsNullOrEmpty(this.lastDirectoryPath))
                 {
-                    form.SelectedPath = lastDirectoryPath;
+                    form.RootFolder = @"C:\";
+                }
+                else
+                {
+                    form.RootFolder = lastDirectoryPath;
                 }
 
                 if (form.ShowDialog(this) != DialogResult.OK)
