@@ -283,7 +283,7 @@ namespace PdfiumViewer
         {
             return BoundsFromPdf(bounds, true);
         }
-            
+
         private Rectangle BoundsFromPdf(PdfRectangle bounds, bool translateOffset)
         {
             var offset = translateOffset ? GetScrollOffset() : Size.Empty;
@@ -680,7 +680,7 @@ namespace PdfiumViewer
         {
             int height = (int)(_height * _scaleFactor + (ShadeBorder.Size.Vertical + PageMargin.Vertical) * Document.PageCount);
             int width = (int)(_maxWidth * _scaleFactor + ShadeBorder.Size.Horizontal + PageMargin.Horizontal);
-            
+
             var center = new Point(
                 DisplayRectangle.Width / 2,
                 DisplayRectangle.Height / 2
@@ -689,7 +689,8 @@ namespace PdfiumViewer
             if (
                 DisplayRectangle.Width > ClientSize.Width ||
                 DisplayRectangle.Height > ClientSize.Height
-            ) {
+            )
+            {
                 center.X += DisplayRectangle.Left;
                 center.Y += DisplayRectangle.Top;
             }

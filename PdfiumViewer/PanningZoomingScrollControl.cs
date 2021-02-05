@@ -142,7 +142,7 @@ namespace PdfiumViewer
                     doZoom = false;
                     break;
             }
-
+         
             if (doZoom)
             {
                 double zoom = _zoom;
@@ -154,7 +154,7 @@ namespace PdfiumViewer
 
                 zoom = Math.Min(Math.Max(zoom, ZoomMin), ZoomMax);
 
-                SetZoom(zoom, e.Location);
+                SetZoom(zoom, MousePosition);// e.Location
             }
             else
             {

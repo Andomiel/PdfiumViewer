@@ -65,13 +65,25 @@ namespace PdfiumViewer.Demo
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this._page = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this._zoom = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this._fitWidth = new System.Windows.Forms.ToolStripButton();
+            this._fitHeight = new System.Windows.Forms.ToolStripButton();
+            this._fitBest = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this._rotateLeft = new System.Windows.Forms.ToolStripButton();
+            this._rotateRight = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this._showToolbar = new System.Windows.Forms.ToolStripButton();
+            this._showBookmarks = new System.Windows.Forms.ToolStripButton();
+            this._getTextFromPage = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this._pageToolStripLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -81,20 +93,8 @@ namespace PdfiumViewer.Demo
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pdfViewer1 = new PdfiumViewer.PdfViewer();
             this.button1 = new System.Windows.Forms.Button();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this._fitWidth = new System.Windows.Forms.ToolStripButton();
-            this._fitHeight = new System.Windows.Forms.ToolStripButton();
-            this._fitBest = new System.Windows.Forms.ToolStripButton();
-            this._rotateLeft = new System.Windows.Forms.ToolStripButton();
-            this._rotateRight = new System.Windows.Forms.ToolStripButton();
-            this._showToolbar = new System.Windows.Forms.ToolStripButton();
-            this._showBookmarks = new System.Windows.Forms.ToolStripButton();
-            this._getTextFromPage = new System.Windows.Forms.ToolStripButton();
+            this.pdfViewer1 = new PdfiumViewer.PdfViewer();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -136,53 +136,53 @@ namespace PdfiumViewer.Demo
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "&打开文件";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(171, 22);
-            this.toolStripMenuItem8.Text = "&打开文件夹";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem8.Text = "&打开目录";
             this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
             // 
             // openProfessionFolder
             // 
             this.openProfessionFolder.Name = "openProfessionFolder";
-            this.openProfessionFolder.Size = new System.Drawing.Size(171, 22);
-            this.openProfessionFolder.Text = "打开专业";
+            this.openProfessionFolder.Size = new System.Drawing.Size(180, 22);
+            this.openProfessionFolder.Text = "打开专业目录";
             this.openProfessionFolder.Click += new System.EventHandler(this.openProfessionFolder_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(168, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // printPreviewToolStripMenuItem
             // 
             this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.printPreviewToolStripMenuItem.Text = "打印预览";
             this.printPreviewToolStripMenuItem.Click += new System.EventHandler(this.printPreviewToolStripMenuItem_Click);
             // 
             // printMultiplePagesToolStripMenuItem
             // 
             this.printMultiplePagesToolStripMenuItem.Name = "printMultiplePagesToolStripMenuItem";
-            this.printMultiplePagesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.printMultiplePagesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.printMultiplePagesToolStripMenuItem.Text = "打印多页";
             this.printMultiplePagesToolStripMenuItem.Click += new System.EventHandler(this.printMultiplePagesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(168, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "退出";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -369,6 +369,26 @@ namespace PdfiumViewer.Demo
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "<";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = ">";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
@@ -392,20 +412,123 @@ namespace PdfiumViewer.Demo
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton4.Text = "+";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "-";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // _fitWidth
+            // 
+            this._fitWidth.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this._fitWidth.Image = ((System.Drawing.Image)(resources.GetObject("_fitWidth.Image")));
+            this._fitWidth.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._fitWidth.Name = "_fitWidth";
+            this._fitWidth.Size = new System.Drawing.Size(72, 22);
+            this._fitWidth.Text = "自适应宽度";
+            this._fitWidth.Click += new System.EventHandler(this._fitWidth_Click);
+            // 
+            // _fitHeight
+            // 
+            this._fitHeight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this._fitHeight.Image = ((System.Drawing.Image)(resources.GetObject("_fitHeight.Image")));
+            this._fitHeight.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._fitHeight.Name = "_fitHeight";
+            this._fitHeight.Size = new System.Drawing.Size(72, 22);
+            this._fitHeight.Text = "自适应高度";
+            this._fitHeight.Click += new System.EventHandler(this._fitHeight_Click);
+            // 
+            // _fitBest
+            // 
+            this._fitBest.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this._fitBest.Image = ((System.Drawing.Image)(resources.GetObject("_fitBest.Image")));
+            this._fitBest.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._fitBest.Name = "_fitBest";
+            this._fitBest.Size = new System.Drawing.Size(48, 22);
+            this._fitBest.Text = "自适应";
+            this._fitBest.Click += new System.EventHandler(this._fitBest_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
+            // _rotateLeft
+            // 
+            this._rotateLeft.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this._rotateLeft.Image = ((System.Drawing.Image)(resources.GetObject("_rotateLeft.Image")));
+            this._rotateLeft.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._rotateLeft.Name = "_rotateLeft";
+            this._rotateLeft.Size = new System.Drawing.Size(36, 22);
+            this._rotateLeft.Text = "左转";
+            this._rotateLeft.Click += new System.EventHandler(this._rotateLeft_Click);
+            // 
+            // _rotateRight
+            // 
+            this._rotateRight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this._rotateRight.Image = ((System.Drawing.Image)(resources.GetObject("_rotateRight.Image")));
+            this._rotateRight.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._rotateRight.Name = "_rotateRight";
+            this._rotateRight.Size = new System.Drawing.Size(36, 22);
+            this._rotateRight.Text = "右转";
+            this._rotateRight.Click += new System.EventHandler(this._rotateRight_Click);
+            // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+            // 
+            // _showToolbar
+            // 
+            this._showToolbar.CheckOnClick = true;
+            this._showToolbar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this._showToolbar.Image = ((System.Drawing.Image)(resources.GetObject("_showToolbar.Image")));
+            this._showToolbar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._showToolbar.Name = "_showToolbar";
+            this._showToolbar.Size = new System.Drawing.Size(72, 22);
+            this._showToolbar.Text = "显示工具栏";
+            this._showToolbar.Click += new System.EventHandler(this._hideToolbar_Click);
+            // 
+            // _showBookmarks
+            // 
+            this._showBookmarks.CheckOnClick = true;
+            this._showBookmarks.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this._showBookmarks.Image = ((System.Drawing.Image)(resources.GetObject("_showBookmarks.Image")));
+            this._showBookmarks.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._showBookmarks.Name = "_showBookmarks";
+            this._showBookmarks.Size = new System.Drawing.Size(60, 22);
+            this._showBookmarks.Text = "显示书签";
+            this._showBookmarks.Click += new System.EventHandler(this._hideBookmarks_Click);
+            // 
+            // _getTextFromPage
+            // 
+            this._getTextFromPage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this._getTextFromPage.Image = ((System.Drawing.Image)(resources.GetObject("_getTextFromPage.Image")));
+            this._getTextFromPage.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._getTextFromPage.Name = "_getTextFromPage";
+            this._getTextFromPage.Size = new System.Drawing.Size(60, 22);
+            this._getTextFromPage.Text = "获取文本";
+            this._getTextFromPage.ToolTipText = "Get Text From Current Page";
+            this._getTextFromPage.Click += new System.EventHandler(this._getTextFromPage_Click);
             // 
             // statusStrip1
             // 
@@ -510,14 +633,6 @@ namespace PdfiumViewer.Demo
             this.label1.Text = "文件清单";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pdfViewer1
-            // 
-            this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pdfViewer1.Location = new System.Drawing.Point(0, 0);
-            this.pdfViewer1.Name = "pdfViewer1";
-            this.pdfViewer1.Size = new System.Drawing.Size(924, 657);
-            this.pdfViewer1.TabIndex = 2;
-            // 
             // button1
             // 
             this.button1.BackgroundImage = global::PdfiumViewer.Demo.Properties.Resources.export;
@@ -530,128 +645,14 @@ namespace PdfiumViewer.Demo
             this.button1.TabIndex = 99;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // toolStripButton1
+            // pdfViewer1
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "<";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = ">";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton4.Text = "+";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "-";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // _fitWidth
-            // 
-            this._fitWidth.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this._fitWidth.Image = ((System.Drawing.Image)(resources.GetObject("_fitWidth.Image")));
-            this._fitWidth.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._fitWidth.Name = "_fitWidth";
-            this._fitWidth.Size = new System.Drawing.Size(72, 22);
-            this._fitWidth.Text = "自适应宽度";
-            this._fitWidth.Click += new System.EventHandler(this._fitWidth_Click);
-            // 
-            // _fitHeight
-            // 
-            this._fitHeight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this._fitHeight.Image = ((System.Drawing.Image)(resources.GetObject("_fitHeight.Image")));
-            this._fitHeight.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._fitHeight.Name = "_fitHeight";
-            this._fitHeight.Size = new System.Drawing.Size(72, 22);
-            this._fitHeight.Text = "自适应高度";
-            this._fitHeight.Click += new System.EventHandler(this._fitHeight_Click);
-            // 
-            // _fitBest
-            // 
-            this._fitBest.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this._fitBest.Image = ((System.Drawing.Image)(resources.GetObject("_fitBest.Image")));
-            this._fitBest.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._fitBest.Name = "_fitBest";
-            this._fitBest.Size = new System.Drawing.Size(48, 22);
-            this._fitBest.Text = "自适应";
-            this._fitBest.Click += new System.EventHandler(this._fitBest_Click);
-            // 
-            // _rotateLeft
-            // 
-            this._rotateLeft.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this._rotateLeft.Image = ((System.Drawing.Image)(resources.GetObject("_rotateLeft.Image")));
-            this._rotateLeft.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._rotateLeft.Name = "_rotateLeft";
-            this._rotateLeft.Size = new System.Drawing.Size(36, 22);
-            this._rotateLeft.Text = "左转";
-            this._rotateLeft.Click += new System.EventHandler(this._rotateLeft_Click);
-            // 
-            // _rotateRight
-            // 
-            this._rotateRight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this._rotateRight.Image = ((System.Drawing.Image)(resources.GetObject("_rotateRight.Image")));
-            this._rotateRight.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._rotateRight.Name = "_rotateRight";
-            this._rotateRight.Size = new System.Drawing.Size(36, 22);
-            this._rotateRight.Text = "右转";
-            this._rotateRight.Click += new System.EventHandler(this._rotateRight_Click);
-            // 
-            // _showToolbar
-            // 
-            this._showToolbar.CheckOnClick = true;
-            this._showToolbar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this._showToolbar.Image = ((System.Drawing.Image)(resources.GetObject("_showToolbar.Image")));
-            this._showToolbar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._showToolbar.Name = "_showToolbar";
-            this._showToolbar.Size = new System.Drawing.Size(72, 22);
-            this._showToolbar.Text = "显示工具栏";
-            this._showToolbar.Click += new System.EventHandler(this._hideToolbar_Click);
-            // 
-            // _showBookmarks
-            // 
-            this._showBookmarks.CheckOnClick = true;
-            this._showBookmarks.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this._showBookmarks.Image = ((System.Drawing.Image)(resources.GetObject("_showBookmarks.Image")));
-            this._showBookmarks.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._showBookmarks.Name = "_showBookmarks";
-            this._showBookmarks.Size = new System.Drawing.Size(60, 22);
-            this._showBookmarks.Text = "显示书签";
-            this._showBookmarks.Click += new System.EventHandler(this._hideBookmarks_Click);
-            // 
-            // _getTextFromPage
-            // 
-            this._getTextFromPage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this._getTextFromPage.Image = ((System.Drawing.Image)(resources.GetObject("_getTextFromPage.Image")));
-            this._getTextFromPage.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._getTextFromPage.Name = "_getTextFromPage";
-            this._getTextFromPage.Size = new System.Drawing.Size(60, 22);
-            this._getTextFromPage.Text = "获取文本";
-            this._getTextFromPage.ToolTipText = "Get Text From Current Page";
-            this._getTextFromPage.Click += new System.EventHandler(this._getTextFromPage_Click);
+            this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pdfViewer1.Location = new System.Drawing.Point(0, 0);
+            this.pdfViewer1.Name = "pdfViewer1";
+            this.pdfViewer1.Size = new System.Drawing.Size(924, 657);
+            this.pdfViewer1.TabIndex = 2;
+            this.pdfViewer1.ZoomMode = PdfiumViewer.PdfViewerZoomMode.FitBest;
             // 
             // TirionMainForm
             // 
@@ -662,6 +663,7 @@ namespace PdfiumViewer.Demo
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "TirionMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
