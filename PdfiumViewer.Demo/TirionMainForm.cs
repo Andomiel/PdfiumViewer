@@ -494,7 +494,8 @@ namespace PdfiumViewer.Demo
             for (int i = 0; i < files.Length; i++)
             {
                 var file = files[i];
-                listView1.Items.Add(new ListViewItem(new string[] { (i + 1).ToString(), file.Name.Replace(file.Extension, string.Empty), file.FullName }));
+                var lvi = new ListViewItem(new string[] { (i + 1).ToString(), file.Name.Replace(file.Extension, string.Empty), file.FullName });
+                listView1.Items.Add(lvi);
             }
 
             listView1.ItemSelectionChanged += listView1_ItemSelectionChanged;

@@ -124,6 +124,7 @@ namespace PdfiumViewer
             // 
             this._renderer.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this._renderer, "_renderer");
+            this._renderer.MouseWheelMode = PdfiumViewer.MouseWheelMode.Zoom;
             this._renderer.Name = "_renderer";
             this._renderer.Page = 0;
             this._renderer.Rotation = PdfiumViewer.PdfRotation.Rotate0;
