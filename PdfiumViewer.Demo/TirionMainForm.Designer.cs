@@ -136,53 +136,53 @@ namespace PdfiumViewer.Demo
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.openToolStripMenuItem.Text = "&打开文件";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(171, 22);
             this.toolStripMenuItem8.Text = "&打开目录";
             this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
             // 
             // openProfessionFolder
             // 
             this.openProfessionFolder.Name = "openProfessionFolder";
-            this.openProfessionFolder.Size = new System.Drawing.Size(180, 22);
+            this.openProfessionFolder.Size = new System.Drawing.Size(171, 22);
             this.openProfessionFolder.Text = "打开专业目录";
             this.openProfessionFolder.Click += new System.EventHandler(this.openProfessionFolder_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(168, 6);
             // 
             // printPreviewToolStripMenuItem
             // 
             this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.printPreviewToolStripMenuItem.Text = "打印预览";
             this.printPreviewToolStripMenuItem.Click += new System.EventHandler(this.printPreviewToolStripMenuItem_Click);
             // 
             // printMultiplePagesToolStripMenuItem
             // 
             this.printMultiplePagesToolStripMenuItem.Name = "printMultiplePagesToolStripMenuItem";
-            this.printMultiplePagesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.printMultiplePagesToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.printMultiplePagesToolStripMenuItem.Text = "打印多页";
             this.printMultiplePagesToolStripMenuItem.Click += new System.EventHandler(this.printMultiplePagesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(168, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.exitToolStripMenuItem.Text = "退出";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 

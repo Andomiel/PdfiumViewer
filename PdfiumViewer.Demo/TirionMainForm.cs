@@ -429,14 +429,36 @@ namespace PdfiumViewer.Demo
                 closeableTabControl1.TabRadiusLeftTop = 0;
                 closeableTabControl1.TabBackNormalColor = Color.LightGreen;
                 closeableTabControl1.TabBackSelectedColor = Color.ForestGreen;
+                closeableTabControl1.Multiline = true;
 
                 var directories = Directory.GetDirectories(targetPath);
                 foreach (var item in directories)
                 {
                     AddTabPagesByDirectory(item, closeableTabControl1);
                 }
+
+                closeableTabControl1.SelectedIndexChanged += CloseableTabControl1_SelectedIndexChanged;
+
                 this.tableLayoutPanel1.Controls.Add(closeableTabControl1, 0, 1);
             }
+        }
+
+        private void CloseableTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var tab = sender as CloseableTabControl;
+            if (tab == null)
+            {
+                return;
+            }
+            var tabPage = tab.SelectedTab;
+            if (tabPage == null)
+            {
+                return;
+            }
+            string path = tab.SelectedTab.Tag.ToString();
+
+            //设置上层label文本
+            label1.Text = new DirectoryInfo(path).Parent.Name;
         }
 
         private void AddTabPagesByDirectory(string path, CloseableTabControl tabControl)
@@ -458,6 +480,7 @@ namespace PdfiumViewer.Demo
             tabPage1.TabIndex = 0;
             tabPage1.Text = directory.Name;
             tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Tag = path;
 
             AddListViewToTabPage(pdfFiles, tabPage1);
 
@@ -566,8 +589,6 @@ namespace PdfiumViewer.Demo
             }
 
             this.lastFolders = checkboxBrowser.SelectedDirectories.OrderBy(p => p.Length).ToList();
-            //设置上层label文本
-            label1.Text = new DirectoryInfo(this.lastFolders.First()).Name;
             // 
             // 添加tab控件
             // 
@@ -582,11 +603,21 @@ namespace PdfiumViewer.Demo
             closeableTabControl1.TabRadiusLeftTop = 0;
             closeableTabControl1.TabBackNormalColor = Color.LightGreen;
             closeableTabControl1.TabBackSelectedColor = Color.ForestGreen;
+            closeableTabControl1.Multiline = true;
 
             foreach (var item in this.lastFolders)
             {
                 AddTabPagesByDirectory(item, closeableTabControl1);
             }
+
+            //设置上层label文本
+            if (closeableTabControl1.TabPages.Count > 0)
+            {
+                string path = closeableTabControl1.TabPages[0].Tag.ToString();
+                label1.Text = new DirectoryInfo(path).Parent.Name;
+            }
+
+            closeableTabControl1.SelectedIndexChanged += CloseableTabControl1_SelectedIndexChanged;
             this.tableLayoutPanel1.Controls.Add(closeableTabControl1, 0, 1);
         }
     }

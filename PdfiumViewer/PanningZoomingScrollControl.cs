@@ -142,7 +142,7 @@ namespace PdfiumViewer
                     doZoom = false;
                     break;
             }
-         
+
             if (doZoom)
             {
                 double zoom = _zoom;
@@ -154,7 +154,15 @@ namespace PdfiumViewer
 
                 zoom = Math.Min(Math.Max(zoom, ZoomMin), ZoomMax);
 
-                SetZoom(zoom, MousePosition);// e.Location
+                try
+                {
+                    SetZoom(zoom, MousePosition);// e.Location
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("文档还未加载完成，不可缩放");
+                    return;
+                }
             }
             else
             {
