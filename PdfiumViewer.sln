@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfiumViewer", "PdfiumViewer\PdfiumViewer.csproj", "{438914B6-5D1C-482C-B942-5C0E057EEF6F}"
 EndProject
@@ -10,6 +10,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfiumViewer.WPFDemo", "PdfiumViewer.WPFDemo\PdfiumViewer.WPFDemo.csproj", "{CBD6C52A-F0F4-48B8-957B-8CAD54ACD837}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfiumViewer.Test", "PdfiumViewer.Test\PdfiumViewer.Test.csproj", "{61083268-3F14-47B7-8753-AF69BB3D0891}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PdfiumViewerInstaller", "PdfiumViewerInstaller\PdfiumViewerInstaller.vdproj", "{A3B165B2-CA8B-4408-8CCE-217D4FF40D8D}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PdfiumViewer.Setup", "PdfiumViewer.Setup\PdfiumViewer.Setup.vdproj", "{51FE70E2-DDE4-463F-8046-641F5D7327F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,8 +72,23 @@ Global
 		{61083268-3F14-47B7-8753-AF69BB3D0891}.Release|x64.ActiveCfg = Release|Any CPU
 		{61083268-3F14-47B7-8753-AF69BB3D0891}.Release|x64.Build.0 = Release|Any CPU
 		{61083268-3F14-47B7-8753-AF69BB3D0891}.Release|x86.ActiveCfg = Release|Any CPU
+		{A3B165B2-CA8B-4408-8CCE-217D4FF40D8D}.Debug|Any CPU.ActiveCfg = Debug
+		{A3B165B2-CA8B-4408-8CCE-217D4FF40D8D}.Debug|x64.ActiveCfg = Debug
+		{A3B165B2-CA8B-4408-8CCE-217D4FF40D8D}.Debug|x86.ActiveCfg = Debug
+		{A3B165B2-CA8B-4408-8CCE-217D4FF40D8D}.Release|Any CPU.ActiveCfg = Release
+		{A3B165B2-CA8B-4408-8CCE-217D4FF40D8D}.Release|x64.ActiveCfg = Release
+		{A3B165B2-CA8B-4408-8CCE-217D4FF40D8D}.Release|x86.ActiveCfg = Release
+		{51FE70E2-DDE4-463F-8046-641F5D7327F5}.Debug|Any CPU.ActiveCfg = Debug
+		{51FE70E2-DDE4-463F-8046-641F5D7327F5}.Debug|x64.ActiveCfg = Debug
+		{51FE70E2-DDE4-463F-8046-641F5D7327F5}.Debug|x86.ActiveCfg = Debug
+		{51FE70E2-DDE4-463F-8046-641F5D7327F5}.Release|Any CPU.ActiveCfg = Release
+		{51FE70E2-DDE4-463F-8046-641F5D7327F5}.Release|x64.ActiveCfg = Release
+		{51FE70E2-DDE4-463F-8046-641F5D7327F5}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3614895-1453-4042-9FE7-B75F8FF6895F}
 	EndGlobalSection
 EndGlobal
